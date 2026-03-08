@@ -1,0 +1,7 @@
+# 只保留网站文件，忽略其他所有内容
+*
+!index.html
+!style.css
+!app.js
+!docs.js
+!.gitignore

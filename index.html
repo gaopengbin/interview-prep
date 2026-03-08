@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习资料 - AI / GIS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+      id="hljs-light"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+      id="hljs-dark"
+      disabled
+    />
+  </head>
+  <body>
+    <!-- 侧边栏 -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h1>📚 学习资料</h1>
+        <div class="track-switcher" id="trackSwitcher">
+          <button class="track-btn active" data-track="ai">🤖 AI 应用</button>
+          <button class="track-btn" data-track="gis">🌍 GIS 开发</button>
+        </div>
+        <div class="search-box" id="searchBox">
+          <input type="text" class="search-input" id="searchInput" placeholder="搜索全部文档… (Ctrl+K)" />
+          <span class="search-shortcut" id="searchShortcut">Ctrl+K</span>
+        </div>
+      </div>
+
+      <nav class="nav" id="navContainer">
+        <!-- 由 app.js 从 NAV_SECTIONS 自动生成 -->
+      </nav>
+    </aside>
+
+    <!-- 搜索结果浮层 -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- 移动端菜单按钮 -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <!-- 主内容区 -->
+    <main class="content" id="content">
+      <div class="content-header" id="contentHeader">
+        <h2 id="docTitle">Python + FastAPI 速成</h2>
+        <div class="content-actions">
+          <button class="btn-icon" id="themeToggle" title="切换深色模式">
+            🌙
+          </button>
+          <button class="btn-icon" id="scrollTop" title="回到顶部">⬆️</button>
+        </div>
+      </div>
+      <div class="content-body" id="contentBody">
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <p>加载中...</p>
+        </div>
+        <article class="markdown-body" id="article"></article>
+      </div>
+    </main>
+
+    <!-- 目录侧栏 -->
+    <aside class="toc" id="toc">
+      <h4>目录</h4>
+      <nav id="tocNav"></nav>
+    </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="docs.js?v=2"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
