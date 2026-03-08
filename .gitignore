@@ -5,3 +5,5 @@
 !app.js
 !docs.js
 !.gitignore
+!.github/
+!.github/**
