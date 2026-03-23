@@ -252,6 +252,22 @@ menuToggle.addEventListener('click', () => {
   sidebar.classList.toggle('open');
 });
 
+// ===== Sidebar Toggle (Desktop) =====
+const sidebarToggle = document.getElementById('sidebarToggle');
+if (sidebarToggle) {
+  // Restore from localStorage
+  if (localStorage.getItem('sidebarCollapsed') === 'true') {
+    document.body.classList.add('sidebar-collapsed');
+    sidebarToggle.textContent = '▶';
+  }
+
+  sidebarToggle.addEventListener('click', () => {
+    const collapsed = document.body.classList.toggle('sidebar-collapsed');
+    sidebarToggle.textContent = collapsed ? '▶' : '◀';
+    localStorage.setItem('sidebarCollapsed', collapsed);
+  });
+}
+
 // Close sidebar when clicking outside on mobile
 document.addEventListener('click', (e) => {
   if (window.innerWidth <= 768 &&
